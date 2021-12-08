@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="books, form, library">
+    <meta name="description" content="Form to add new book to our book library">
+    <meta name="author" content="Patryk Smolarz">
+    <title>Book library</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header class="header__wrapper">
+        <h1>Book Library</h1>
+    </header>
+    <main class="content__wrapper">
+        <div class="book-form">
+            <form>
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+                <p class="error-title">This field must contain at least 1 character</p>
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author">
+                <p class="error-author">This field must contain at least 3 characters</p>
+                <label for="priority">Reading priority</label>
+                <input type="number" name="priority" id="priority" min="1" max="5" required>
+                <p class="error-priority">This field must contain a number between 1 and 5</p>
+                <label for="">Categories</label>
+                <select name="category" id="category">
+                    <option value="choose">Choose category</option>
+                    <option value="History">History</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Sport">Sport</option>
+                </select>
+                <p class="error-category">Choose category</p>
+                <button class="add-button" type="submit" value="Add book">Add book</button>
+            </form>
+        </div>
+        <div class="book-library">
+            <div class="book-library_properties">
+                <p>Title</p>
+                <p>Author</p>
+                <p>Reading priority</p>
+                <p>Category</p>
+            </div>
+        </div>
+    </main>
+<script src="./js/index.js"></script>
+</body>
+</html>
