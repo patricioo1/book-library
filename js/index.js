@@ -73,7 +73,7 @@ const validateForm = () => {
         errorTitle.classList.add('show')
     } else if (inputAuthor.value.length < 3) {
         errorAuthor.classList.add('show')
-    } else if (inputPriority.value === '' || inputPriority.value > 5) {
+    } else if (inputPriority.value === '' || inputPriority.value > 5 || inputPriority.value <= 0) {
         errorPriority.classList.add('show')
     } else if (selectCategory.value === 'choose') {
         errorCategory.classList.add('show')
