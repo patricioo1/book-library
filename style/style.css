@@ -2,15 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, serif;
+    font-family: Oxygen, Arial, serif;
+    font-weight: bold;
 }
 
 body {
-    background-color: lightgray;
+    background-color: #fff;
 }
 
 .header__wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -19,58 +21,26 @@ body {
 
 .header__wrapper h1 {
     position: relative;
+    font-size: 24px;
 }
 
-.header__wrapper h1::before {
-    content: '\f558';
+.header__wrapper h1::after {
+    content: '';
     display: block;
     position: absolute;
-    font-family: 'Font Awesome 5 Free';
-    top: 50%;
-    right: -20%;
-    transform: translateY(-50%);
-}
-
-.categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    bottom: -10px;
+    left: 0;
     width: 100%;
-    height: auto;
-    padding: 20px;
-}
-
-.categories p {
-    width: 100%;
-    text-align: center;
-}
-
-.categories button {
-    padding: 5px 10px;
-    border: 1px solid green;
-    background-color: lightgreen;
-    cursor: pointer;
-    width: 150px;
-    border-radius: 3px;
-    margin-top: 10px;
-}
-
-.categories button:hover {
-    background-color: rgb(9, 204, 9);
-    transition: .3s;
-}
-
-.categories button:focus {
-    background-color: rgb(9, 204, 9);
+    background-color: #C4C4C4;
+    height: 3px;
+    border-radius: 50px;
 }
 
 .content__wrapper {
     display: flex;
     width: 90%;
     min-height: 400px;
-    background-color: lightgray;
     margin: 0 auto;
-    border-top: 1px solid black;
     padding-top: 25px;
 }
 
@@ -90,29 +60,31 @@ body {
 .content__wrapper .book-form form label {
     margin-bottom: 10px;
     padding-left: 10px;
+    color: #797979;
 }
 
 .content__wrapper .book-form form input, select {
     margin-bottom: 10px;
     width: 200px;
-    border-radius: 3px;
-    border: none;
+    border-radius: 8px;
+    border: 2px solid #C8C8C8;
     text-indent: 5px;
     padding: 5px;
 }
 
 .content__wrapper .book-form form .add-button {
     padding: 5px 10px;
-    border: 1px solid green;
-    background-color: lightgreen;
+    border: 2px solid #2E7BEC;
+    background-color: #2E7BEC;
+    color: #fff;
     cursor: pointer;
-    width: 150px;
-    border-radius: 3px;
-    margin: 50px auto 0px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 50px 0px;
 }
 
 .content__wrapper .book-form form .add-button:hover {
-    background-color: rgb(9, 204, 9);
+    background-color: #388DF7;
     transition: .3s;
 }
 
@@ -153,7 +125,8 @@ body {
     margin: 5px 0px;
     height: auto;
     min-height: 60px;
-    background-color: khaki;
+    background-color: #388DF7;
+    color: #fff;
     border-radius: 5px;
 }
 
@@ -161,6 +134,28 @@ body {
     width: 25%;
     text-align: center;
     word-break: break-all;
+}
+
+.content__wrapper .book-library .book-library_books .delete-book {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.content__wrapper .book-library .book-library_books .delete-book::after {
+    content: '\58';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .show {
